@@ -51,5 +51,26 @@
     ![Exp2](https://user-images.githubusercontent.com/74300223/215529192-38beae58-626e-4e93-8f08-41e2e09e66f5.png)
     
 ### 3. Interfacing of arduino with Led to get on with push button
+- **Code :**
+    ```   
+    void setup()
+    {
+      pinMode(2, INPUT);
+      pinMode(13, OUTPUT);
+      Serial.begin(9600);
+    }
+    
+    void loop()
+    {
+      int buttonState = digitalRead(2);
+      if (buttonState == HIGH){
+        digitalWrite(13, HIGH);
+      } else {
+        digitalWrite(13, LOW);
+      }
+    }
+    ```
+- **Circuit :**
+    ![Exp3](https://user-images.githubusercontent.com/74300223/215542725-599c43c2-de57-43ff-87e2-f9320209762d.png)
 
 ### 4. Interfacing of Arduino with Buzzer
