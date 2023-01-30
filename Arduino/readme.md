@@ -74,3 +74,21 @@
     ![Exp3](https://user-images.githubusercontent.com/74300223/215542725-599c43c2-de57-43ff-87e2-f9320209762d.png)
 
 ### 4. Interfacing of Arduino with Buzzer
+- **Code :**
+    ```
+    void setup()
+    {
+      pinMode(9, OUTPUT);
+    }
+
+    void loop()
+    {
+      tone(9, 1000); // Here 1000 refers to 1KHz
+      delay(1000); 
+      noTone(9);
+      delay(1000); 
+    }
+    ```
+- **Circuit :**
+    ![Exp4](https://user-images.githubusercontent.com/74300223/215545828-5a91040f-8fa6-419c-9df9-7b13729a3006.png)
+
