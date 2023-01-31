@@ -159,3 +159,30 @@
 - **Circuit :**
     ![Exp6](https://user-images.githubusercontent.com/74300223/215641071-6494c00c-8c8a-4d72-8e0a-48dbd6a8ecd7.png)
 
+### 7. Interfacing of Arduino with Gas sensor and Buzzer
+- **Code :**
+```
+    void setup(){
+      pinMode(2,OUTPUT);
+      pinMode(A0,INPUT);
+      Serial.begin(9600);
+    }
+
+    void loop(){
+      int gas = analogRead(A0);
+      if(gas > 90){
+        Serial.print(gas);
+        Serial.println(" Gas Smoke Detected");
+        tone(2,1000);
+        delay(1000);
+      }
+      else{
+        Serial.print(gas);
+        Serial.println(" No Gas Smoke Detected");
+        noTone(2);
+        delay(1000);
+      }
+    }
+```
+- **Circuit :**
+    ![Exp7](https://user-images.githubusercontent.com/74300223/215739623-4bf0df55-7b2f-493c-8e6a-c95aba9aaea0.png)
