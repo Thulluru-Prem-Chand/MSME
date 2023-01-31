@@ -135,4 +135,27 @@
 - **Circuit :**
     ![Exp5](https://user-images.githubusercontent.com/74300223/215637182-418a02eb-f50c-4e35-926a-21da2a0a788e.png)
 
+### 6. Interfacing of Arduino with Buzzer and Push button
+- **Code :**
+```
+    void setup()
+    {
+      pinMode(2, INPUT);
+      pinMode(13, OUTPUT);
+      Serial.begin(9600);
+    }
+
+    void loop()
+    {
+      int buzz = digitalRead(2);
+
+      if (buzz == HIGH){
+        tone(13, 1000);
+      } else {
+        noTone(13);
+      }
+    }
+```
+- **Circuit :**
+    ![Exp6](https://user-images.githubusercontent.com/74300223/215641071-6494c00c-8c8a-4d72-8e0a-48dbd6a8ecd7.png)
 
