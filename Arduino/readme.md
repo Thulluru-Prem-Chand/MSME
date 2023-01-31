@@ -135,5 +135,6 @@
 ```
 
 - **Circuit :**
-    ![Exp5](https://user-images.githubusercontent.com/74300223/215634346-c5f77b1c-617a-4705-b1a9-74313f3f10ae.png)
+    ![Exp5](https://user-images.githubusercontent.com/74300223/215637182-418a02eb-f50c-4e35-926a-21da2a0a788e.png)
+
 
