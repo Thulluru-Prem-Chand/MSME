@@ -187,7 +187,7 @@
 - **Circuit :**
     ![Exp7](https://user-images.githubusercontent.com/74300223/215739623-4bf0df55-7b2f-493c-8e6a-c95aba9aaea0.png)
     
-### 8. Interfacing of Arduino with UlstraSonic Sensor
+### 8. Interfacing of Arduino with UlstraSonic Sensor HC-SR04
 - **Code :**
 ```
     int trig = 3;
