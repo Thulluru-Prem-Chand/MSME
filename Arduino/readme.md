@@ -186,3 +186,41 @@
 ```
 - **Circuit :**
     ![Exp7](https://user-images.githubusercontent.com/74300223/215739623-4bf0df55-7b2f-493c-8e6a-c95aba9aaea0.png)
+    
+### 8. Interfacing of Arduino with UlstraSonic Sensor
+- **Code :**
+```
+    int trig = 3;
+    int echo = 2;
+
+    void setup(){
+      pinMode(trig, OUTPUT);
+      pinMode(echo, INPUT);
+      Serial.begin(9600);
+    }
+
+    void loop(){
+      int distOfObj, timeOfPulse;
+
+      digitalWrite(trig,LOW);
+      delay(2);
+      digitalWrite(trig,HIGH);
+      delay(10);
+      digitalWrite(trig,LOW);
+
+      timeOfPulse = pulseIn(echo, HIGH);
+      distOfObj = (timeOfPulse/2)*0.0344;
+
+      if(distOfObj >=335 || distOfObj <=2){
+        Serial.println("No Object With in Range");
+      }
+      else{
+        Serial.print("Object Detected at ");
+        Serial.print(distOfObj);
+        Serial.println(" cm");
+      }
+      delay(100);
+    }
+```
+- **Circuit :**
+    ![Exp8](https://user-images.githubusercontent.com/74300223/215751408-dfa4f679-d371-4cda-8168-5246290e8e2d.png)
