@@ -95,8 +95,6 @@
 ### 5. Interfacing of Arduino wuth 3 LED's and 3 Push Buttons
 - **Code :**
 ```
-    int buttonState = 0;
-
     void setup()
     {
       pinMode(2, INPUT);
