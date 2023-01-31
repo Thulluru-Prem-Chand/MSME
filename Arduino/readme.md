@@ -224,3 +224,64 @@
 ```
 - **Circuit :**
     ![Exp8](https://user-images.githubusercontent.com/74300223/215751408-dfa4f679-d371-4cda-8168-5246290e8e2d.png)
+    
+### 9. Interfacing of Arduino with Common Cathode Seven Segment Display
+- **Code :**
+```
+    //printing 1098 on  segment display
+    int a=1,b=3,c=5,d=7,e=9,f=13,g=11;
+    void setup(){
+      pinMode(a, OUTPUT);
+      pinMode(b, OUTPUT);
+      pinMode(c, OUTPUT);
+      pinMode(d, OUTPUT);
+      pinMode(e, OUTPUT);
+      pinMode(f, OUTPUT);
+      pinMode(g, OUTPUT);
+
+    }
+
+    void loop(){
+      //printing 1
+      digitalWrite(a, LOW);
+      digitalWrite(b, HIGH);
+      digitalWrite(c, HIGH);
+      digitalWrite(d, LOW);
+      digitalWrite(e, LOW);
+      digitalWrite(f, LOW);
+      digitalWrite(g, LOW);
+      delay(1000);
+
+      //printing 0
+      digitalWrite(a, HIGH);
+      digitalWrite(b, HIGH);
+      digitalWrite(c, HIGH);
+      digitalWrite(d, HIGH);
+      digitalWrite(e, HIGH);
+      digitalWrite(f, HIGH);
+      digitalWrite(g, LOW);
+      delay(1000);
+
+      //printing 9
+      digitalWrite(a, HIGH);
+      digitalWrite(b, HIGH);
+      digitalWrite(c, HIGH);
+      digitalWrite(d, LOW);
+      digitalWrite(e, LOW);
+      digitalWrite(f, HIGH);
+      digitalWrite(g, HIGH);
+      delay(1000);
+
+      //printing 8
+      digitalWrite(a, HIGH);
+      digitalWrite(b, HIGH);
+      digitalWrite(c, HIGH);
+      digitalWrite(d, HIGH);
+      digitalWrite(e, HIGH);
+      digitalWrite(f, HIGH);
+      digitalWrite(g, HIGH);
+      delay(1000);
+    }
+```
+- **Circuit :**
+    ![Exp9](https://user-images.githubusercontent.com/74300223/215808114-12f33018-8cbb-49d5-919e-9a246d62d801.png)
