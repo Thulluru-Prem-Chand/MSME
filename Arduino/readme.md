@@ -284,4 +284,3 @@
     }
 ```
 - **Circuit :**
-    ![Exp9](https://user-images.githubusercontent.com/74300223/215808114-12f33018-8cbb-49d5-919e-9a246d62d801.png)
