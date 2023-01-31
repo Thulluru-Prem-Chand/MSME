@@ -92,3 +92,48 @@
 - **Circuit :**
     ![Exp4](https://user-images.githubusercontent.com/74300223/215545828-5a91040f-8fa6-419c-9df9-7b13729a3006.png)
 
+### 5. Interfacing of Arduino wuth 3 LED's and 3 Push Buttons
+- **Code :**
+```
+    int buttonState = 0;
+
+    void setup()
+    {
+      pinMode(2, INPUT);
+      pinMode(3, INPUT);
+      pinMode(4, INPUT);
+      pinMode(13, OUTPUT);
+      pinMode(11, OUTPUT);
+      pinMode(9, OUTPUT);
+      Serial.begin(9600);
+    }
+
+    void loop()
+    {
+      int red = digitalRead(2);
+      int yellow = digitalRead(3);
+      int green = digitalRead(4);
+
+      if (red == HIGH){
+        digitalWrite(13, HIGH);
+      } else {
+        digitalWrite(13, LOW);
+      }
+
+      if (yellow == 1){
+        digitalWrite(11, HIGH);
+      } else {
+        digitalWrite(11, LOW);
+      }
+
+      if (green == 1){
+        digitalWrite(9, HIGH);
+      } else {
+        digitalWrite(9, LOW);
+      }
+    }
+```
+
+- **Circuit :**
+    ![Exp5](https://user-images.githubusercontent.com/74300223/215634346-c5f77b1c-617a-4705-b1a9-74313f3f10ae.png)
+
