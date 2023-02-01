@@ -285,3 +285,47 @@
 ```
 - **Circuit :**
     ![Exp91](https://user-images.githubusercontent.com/74300223/215814770-1904f66e-3957-4008-ab1e-5ed244fbc849.png)
+    
+### 10. Interfacing of Arduino with Ultrasonic sensor and LED
+- **Code :**
+```
+    int trig = 3;
+    int echo = 2;
+
+    void setup(){
+      pinMode(trig, OUTPUT);
+      pinMode(echo, INPUT);
+      pinMode(13, OUTPUT);
+      Serial.begin(9600);
+    }
+
+    void loop(){
+      int distOfObj, timeOfPulse;
+
+      digitalWrite(trig,LOW);
+      delay(2);
+      digitalWrite(trig,HIGH);
+      delay(10);
+      digitalWrite(trig,LOW);
+
+      timeOfPulse = pulseIn(echo, HIGH);
+      distOfObj = (timeOfPulse/2)*0.0344;
+
+      if(distOfObj >=332 || distOfObj <=2){
+        Serial.println("No Object With in Range");
+        digitalWrite(13, LOW);
+      }
+      else{
+        Serial.print("Object Detected at ");
+        Serial.print(distOfObj);
+        Serial.println(" cm");
+        digitalWrite(13, HIGH);
+      }
+      delay(500);
+    }
+```
+- ** Circuit :**
+    ![Exp10](https://user-images.githubusercontent.com/74300223/216012833-fe836368-f48d-4f77-9240-0e6497c46696.png)
+
+
+    
