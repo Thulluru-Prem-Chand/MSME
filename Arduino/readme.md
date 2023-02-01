@@ -327,7 +327,7 @@
 - **Circuit :**
     ![Exp10](https://user-images.githubusercontent.com/74300223/216012833-fe836368-f48d-4f77-9240-0e6497c46696.png)
 
-### 11. Interfacing of Arduino with Gas Sensor with Buzzer, Green and Red LED's indication
+### 11. Interfacing of Arduino with Gas Sensor, Buzzer, Green and Red LED's indication
 - **Code :**
 ```
     void setup(){
@@ -361,4 +361,24 @@
 - **Circuit :**
     ![Exp11](https://user-images.githubusercontent.com/74300223/216018111-922e4183-4153-405c-82c9-9e30d3c2a4d3.png)
 
-    
+### 12. Interfacing of Arduino with Temperature Sensor TMP36
+- **Code :**
+```
+    void setup()
+    {
+      pinMode(A0, INPUT);
+      Serial.begin(9600);
+    }
+
+    void loop()
+    {
+      float volt = analogRead(A0) * (5000 / 1024);
+      float temp = (volt-500)/10;
+      Serial.print("Room Temperature : ");
+      Serial.print(temp);
+      Serial.println(" Celcius");
+      delay(500);
+    }
+```
+- **Circuit :**
+    ![Exp12](https://user-images.githubusercontent.com/74300223/216025622-95c0e11d-db1e-4901-a324-e31a519bbb38.png)
