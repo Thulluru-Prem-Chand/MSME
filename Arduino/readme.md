@@ -324,8 +324,41 @@
       delay(500);
     }
 ```
-- ** Circuit :**
+- **Circuit :**
     ![Exp10](https://user-images.githubusercontent.com/74300223/216012833-fe836368-f48d-4f77-9240-0e6497c46696.png)
 
+### 11. Interfacing of Arduino with Gas Sensor with Buzzer, Green and Red LED's indication
+- **Code :**
+```
+    void setup(){
+      pinMode(2,OUTPUT);
+      pinMode(A0,INPUT);
+      pinMode(13,OUTPUT);
+      pinMode(9,OUTPUT);
+      Serial.begin(9600);
+    }
+
+    void loop(){
+      int gas = analogRead(A0);
+      if(gas > 125){
+        Serial.print(gas);
+        Serial.println(" Gas Smoke Detected");
+        tone(2,1000);
+        digitalWrite(13,HIGH);
+        digitalWrite(9,LOW);
+        delay(100);
+      }
+      else{
+        Serial.print(gas);
+        Serial.println(" No Gas Smoke Detected");
+        noTone(2);
+        digitalWrite(13,LOW);
+        digitalWrite(9,HIGH);
+        delay(100);
+      }
+    }
+```
+- **Circuit :**
+    ![Exp11](https://user-images.githubusercontent.com/74300223/216018111-922e4183-4153-405c-82c9-9e30d3c2a4d3.png)
 
     
