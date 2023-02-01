@@ -382,3 +382,33 @@
 ```
 - **Circuit :**
     ![Exp12](https://user-images.githubusercontent.com/74300223/216025622-95c0e11d-db1e-4901-a324-e31a519bbb38.png)
+
+### 13. Interfacing of Arduino with Rain Sensor
+- **Code :**
+``` 
+    void setup() {
+
+        pinMode(A2, INPUT);
+        Serial.begin(9600);
+    }
+
+    void loop() {
+        int level = analogRead(A2);
+        if (level == 0) {
+            Serial.println("Water Level: Empty");
+        }
+        else if (level > 0 && level <= 420) {
+            Serial.println("Water Level: Low");
+        }
+        else if (level > 420 && level <= 520) {
+            Serial.println("Water Level: Medium");
+        }
+        else if (level > 520) {
+            Serial.println("Water Level: High");
+        }
+    }
+```
+- **Circuit :**
+    ![Exp13](https://user-images.githubusercontent.com/74300223/216037402-36f4d0cc-e991-47a7-be38-6b784996a115.png)
+
+    
