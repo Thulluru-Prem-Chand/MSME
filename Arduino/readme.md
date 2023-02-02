@@ -517,7 +517,7 @@
     
 int moisture = 0;
 void setup(){
-	pinMode(A0, INPUT);
+    pinMode(A0, INPUT);
     pinMode(7, OUTPUT);
     pinMode(9, OUTPUT);
     pinMode(12, OUTPUT);
