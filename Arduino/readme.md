@@ -411,4 +411,53 @@
 - **Circuit :**
     ![Exp13](https://user-images.githubusercontent.com/74300223/216037402-36f4d0cc-e991-47a7-be38-6b784996a115.png)
 
-    
+### 13 --  Interfacing of Arduino with Rain Sensor, with Indiaction of 4 LED's
+- **Code:**
+```
+    void setup() {
+
+        pinMode(A2, INPUT);
+        pinMode(2,OUTPUT);
+        pinMode(4,OUTPUT);
+        pinMode(6,OUTPUT);
+        pinMode(8,OUTPUT);
+        
+        Serial.begin(9600);
+    }
+
+    void loop() {
+        int level = analogRead(A2);
+        Serial.print(level);
+       
+        if (level == 0) {
+            Serial.println(" Water Level: Empty");
+            digitalWrite(2,1);
+            digitalWrite(4,0);
+            digitalWrite(6,0);
+            digitalWrite(8,0);
+            
+        }
+        else if (level > 0 && level <= 420) {
+            Serial.println(" Water Level: Low");
+            digitalWrite(2,0);
+            digitalWrite(4,1);
+            digitalWrite(6,0);
+            digitalWrite(8,0);
+            
+        }
+        else if (level > 420 && level <= 650) {
+            Serial.println(" Water Level: Medium");
+            digitalWrite(2,0);
+            digitalWrite(4,0);
+            digitalWrite(6,1);
+            digitalWrite(8,0);
+        }
+        else if (level > 650) {
+          digitalWrite(2,0);
+          digitalWrite(4,0);
+          digitalWrite(6,0);
+          digitalWrite(8,1);
+            Serial.println(" Water Level: High");
+        }
+    }
+```
