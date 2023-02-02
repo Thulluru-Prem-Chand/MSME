@@ -461,3 +461,51 @@
         }
     }
 ```
+
+### 14. Interfacing of Arduino with Gas MQ125 And temp Sensor TMP35
+- **Code :**
+```
+    void setup(){
+      pinMode(2,OUTPUT);
+      pinMode(A2,INPUT);
+
+      pinMode(A0,INPUT);
+      pinMode(13,OUTPUT);
+      Serial.begin(9600);
+    }
+
+    void loop(){
+      int gas = analogRead(A2);
+
+      float volt = analogRead(A0) * (5000 / 1024);
+      float temp = (volt-500)/10;
+
+      if(gas > 125){
+        Serial.print(gas);
+        Serial.println(" Gas Smoke Detected");
+        tone(2,1000);
+      }
+      else{
+        Serial.print(gas);
+        Serial.println(" No Gas Smoke Detected");
+        noTone(2);
+      }
+
+      if(temp>30){
+        Serial.print("Room Temperature : ");
+        Serial.print(temp);
+        Serial.println(" Celcius");
+        digitalWrite(13,HIGH);
+      }
+      else{
+        Serial.print("Room Temperature : ");
+        Serial.print(temp);
+        Serial.println(" Celcius");
+        digitalWrite(13,LOW);
+      }
+      delay(1000);
+
+    }
+```
+- **Circuit :**
+    ![Exp14](https://user-images.githubusercontent.com/74300223/216251130-ba1a7c03-b581-4b59-8a1f-2b2cda19a10d.png)
