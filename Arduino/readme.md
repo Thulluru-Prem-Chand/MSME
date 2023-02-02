@@ -509,3 +509,47 @@
 ```
 - **Circuit :**
     ![Exp14](https://user-images.githubusercontent.com/74300223/216251130-ba1a7c03-b581-4b59-8a1f-2b2cda19a10d.png)
+    
+    
+### 15. Interfacing of Arduino with Soil Moisture sensor and LED's
+- **Code :**
+```
+    
+int moisture = 0;
+void setup(){
+	pinMode(A0, INPUT);
+    pinMode(7, OUTPUT);
+    pinMode(9, OUTPUT);
+    pinMode(12, OUTPUT);
+    Serial.begin(9600);
+}
+
+void loop(){
+    moisture = analogRead(A0);
+    Serial.print("Moisture Content : ");
+    Serial.print(moisture);
+
+    if (moisture < 300) {
+        digitalWrite(7, 0);
+        digitalWrite(9, 0);
+        digitalWrite(12, 1);
+        Serial.println(" LOW Level");
+    } 
+    else if (moisture >=300 && moisture < 700) {
+        digitalWrite(7, 0);
+        digitalWrite(9, 1);
+        digitalWrite(12, 0);
+        Serial.println(" MEDIUM Level");
+    } 
+    else{
+        digitalWrite(7, 1);
+        digitalWrite(9, 0);
+        digitalWrite(12, 0);
+        Serial.println(" HIGH Level");
+    }
+    delay(500);
+}
+```
+
+- **Circuit :**
+    ![Exp15](https://user-images.githubusercontent.com/74300223/216291219-1c8622cf-41e6-4bd1-8f88-fcd6c54612e8.png)
