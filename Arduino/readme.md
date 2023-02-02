@@ -411,7 +411,7 @@
 - **Circuit :**
     ![Exp13](https://user-images.githubusercontent.com/74300223/216037402-36f4d0cc-e991-47a7-be38-6b784996a115.png)
 
-### 13 --  Interfacing of Arduino with Rain Sensor, with Indiaction of 4 LED's
+### 13 --  Interfacing of Arduino with Rain Sensor, with Indication of 4 LED's
 - **Code:**
 ```
     void setup() {
