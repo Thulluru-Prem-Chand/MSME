@@ -383,7 +383,7 @@
 - **Circuit :**
     ![Exp12](https://user-images.githubusercontent.com/74300223/216025622-95c0e11d-db1e-4901-a324-e31a519bbb38.png)
 
-### 13. Interfacing of Arduino with Rain Sensor
+### 13. Interfacing of Arduino with Water Sensor SCN18
 - **Code :**
 ``` 
     void setup() {
@@ -411,7 +411,7 @@
 - **Circuit :**
     ![Exp13](https://user-images.githubusercontent.com/74300223/216037402-36f4d0cc-e991-47a7-be38-6b784996a115.png)
 
-### 13 --  Interfacing of Arduino with Rain Sensor, with Indication of 4 LED's
+### --  Interfacing of Arduino with Rain Sensor SCN18, with Indication of 4 LED's
 - **Code:**
 ```
     void setup() {
