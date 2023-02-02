@@ -2,7 +2,7 @@
 
 ### 1. Interfacing of Arduino with LED
 - **Code :**
-    ```
+```
     void setup()
     {
       pinMode(13, OUTPUT);
@@ -15,13 +15,13 @@
       digitalWrite(13, LOW);
       delay(1000); 
     }
-    ```
+```
 - **Circuit :**
     ![Exp1](https://user-images.githubusercontent.com/74300223/215528814-c579d9fa-c98a-4da7-a615-42f9fb95a057.png)
 
 ### 2. Interfacing of Arduino with 3 LED's
 - **Code :**
-    ```
+```
     void setup()
     {
       pinMode(13, OUTPUT);
@@ -46,13 +46,13 @@
       digitalWrite(11, LOW);
       delay(1000); 
     }
-    ```
+```
 - **Circuit :**
     ![Exp2](https://user-images.githubusercontent.com/74300223/215529192-38beae58-626e-4e93-8f08-41e2e09e66f5.png)
     
 ### 3. Interfacing of arduino with Led to get on with push button
 - **Code :**
-    ```   
+```   
     void setup()
     {
       pinMode(2, INPUT);
@@ -69,13 +69,13 @@
         digitalWrite(13, LOW);
       }
     }
-    ```
+```
 - **Circuit :**
     ![Exp3](https://user-images.githubusercontent.com/74300223/215542725-599c43c2-de57-43ff-87e2-f9320209762d.png)
 
 ### 4. Interfacing of Arduino with Buzzer
 - **Code :**
-    ```
+```
     void setup()
     {
       pinMode(9, OUTPUT);
@@ -88,7 +88,7 @@
       noTone(9);
       delay(1000); 
     }
-    ```
+```
 - **Circuit :**
     ![Exp4](https://user-images.githubusercontent.com/74300223/215545828-5a91040f-8fa6-419c-9df9-7b13729a3006.png)
 
@@ -387,7 +387,6 @@
 - **Code :**
 ``` 
     void setup() {
-
         pinMode(A2, INPUT);
         Serial.begin(9600);
     }
@@ -513,42 +512,41 @@
     
 ### 15. Interfacing of Arduino with Soil Moisture sensor and LED's
 - **Code :**
-```
-    
-int moisture = 0;
-void setup(){
-    pinMode(A0, INPUT);
-    pinMode(7, OUTPUT);
-    pinMode(9, OUTPUT);
-    pinMode(12, OUTPUT);
-    Serial.begin(9600);
-}
-
-void loop(){
-    moisture = analogRead(A0);
-    Serial.print("Moisture Content : ");
-    Serial.print(moisture);
-
-    if (moisture < 300) {
-        digitalWrite(7, 0);
-        digitalWrite(9, 0);
-        digitalWrite(12, 1);
-        Serial.println(" LOW Level");
-    } 
-    else if (moisture >=300 && moisture < 700) {
-        digitalWrite(7, 0);
-        digitalWrite(9, 1);
-        digitalWrite(12, 0);
-        Serial.println(" MEDIUM Level");
-    } 
-    else{
-        digitalWrite(7, 1);
-        digitalWrite(9, 0);
-        digitalWrite(12, 0);
-        Serial.println(" HIGH Level");
+```   
+    int moisture = 0;
+    void setup(){
+        pinMode(A0, INPUT);
+        pinMode(7, OUTPUT);
+        pinMode(9, OUTPUT);
+        pinMode(12, OUTPUT);
+        Serial.begin(9600);
     }
-    delay(500);
-}
+
+    void loop(){
+        moisture = analogRead(A0);
+        Serial.print("Moisture Content : ");
+        Serial.print(moisture);
+
+        if (moisture < 300) {
+            digitalWrite(7, 0);
+            digitalWrite(9, 0);
+            digitalWrite(12, 1);
+            Serial.println(" LOW Level");
+        } 
+        else if (moisture >=300 && moisture < 700) {
+            digitalWrite(7, 0);
+            digitalWrite(9, 1);
+            digitalWrite(12, 0);
+            Serial.println(" MEDIUM Level");
+        } 
+        else{
+            digitalWrite(7, 1);
+            digitalWrite(9, 0);
+            digitalWrite(12, 0);
+            Serial.println(" HIGH Level");
+        }
+        delay(500);
+    }
 ```
 
 - **Circuit :**
