@@ -551,3 +551,30 @@
 
 - **Circuit :**
     ![Exp15](https://user-images.githubusercontent.com/74300223/216291219-1c8622cf-41e6-4bd1-8f88-fcd6c54612e8.png)
+    
+### 16. Interfacing of Arduino with IR Sensor HW-201
+- **Code :**
+```
+    void setup() {
+      pinMode(2,INPUT);
+      pinMode(12,OUTPUT);
+      pinMode(10,OUTPUT);
+      Serial.begin(9600);
+    }
+
+    void loop() {
+      if (digitalRead(2)==0){
+          digitalWrite(12,HIGH);
+          digitalWrite(10,LOW);
+          Serial.println("Object Detected");
+        }
+      else{
+          digitalWrite(10,HIGH);
+          digitalWrite(12,LOW);
+          Serial.println("No Object Detected");
+        }
+
+    }
+```
+- **Circuit :**
+    
