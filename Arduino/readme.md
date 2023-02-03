@@ -578,3 +578,26 @@
 ```
 - **Circuit :**
     
+### 17. Interfacing of Arduino with Fire Sensor HW-484
+- **Code :**
+```
+    void setup() {
+      pinMode(2,INPUT);
+      pinMode(12,OUTPUT);
+      pinMode(10,OUTPUT);
+      Serial.begin(9600);
+    }
+
+    void loop() {
+      if (digitalRead(2)==1){
+          digitalWrite(12,HIGH);
+          digitalWrite(10,LOW);
+          Serial.println("Fire Detected");
+        }
+      else{
+          digitalWrite(10,HIGH);
+          digitalWrite(12,LOW);
+          Serial.println("No Fire Detected");
+        }  
+    }
+```
