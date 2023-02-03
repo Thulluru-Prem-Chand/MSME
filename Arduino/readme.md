@@ -577,7 +577,10 @@
     }
 ```
 - **Circuit :**
-    
+    ![Exp16 1](https://user-images.githubusercontent.com/74300223/216525490-edabbeda-7dc7-444c-997d-03d7ce0b086a.jpg)
+    ![Exp16 2](https://user-images.githubusercontent.com/74300223/216525517-b8d2a390-0ffc-40c3-b666-13d710dacd37.jpg)       
+
+
 ### 17. Interfacing of Arduino with Fire Sensor HW-484
 - **Code :**
 ```
@@ -601,3 +604,6 @@
         }  
     }
 ```
+- **Circuit :**
+    ![exp17 1](https://user-images.githubusercontent.com/74300223/216525755-2c846a69-5b87-44e4-8346-3d404cf3abd7.jpg)
+    ![exp17 2](https://user-images.githubusercontent.com/74300223/216525776-f9bdba3e-f0ce-4e42-a7c8-657b4c0ba56e.jpg)
