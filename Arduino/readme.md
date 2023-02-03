@@ -607,3 +607,38 @@
 - **Circuit :**
     ![exp17 1](https://user-images.githubusercontent.com/74300223/216525755-2c846a69-5b87-44e4-8346-3d404cf3abd7.jpg)
     ![exp17 2](https://user-images.githubusercontent.com/74300223/216525776-f9bdba3e-f0ce-4e42-a7c8-657b4c0ba56e.jpg)
+    
+### 18. Interfacing of Arduino with Rain Sensor FC-07
+- **Code :**
+```
+    void setup() {
+      pinMode(A0,INPUT);
+      pinMode(12,OUTPUT);
+      pinMode(10,OUTPUT);
+      Serial.begin(9600);
+    }
+
+    void loop() {
+      int value = map(analogRead(A0),0,1023,255,0);
+      Serial.print(value);
+      if (value <=10){
+          Serial.println(" No Rain");
+          digitalWrite(12,LOW);
+          digitalWrite(10,LOW);
+        }
+      else if(value>10 and value<125){
+        digitalWrite(10,HIGH);
+        digitalWrite(12,LOW);
+        Serial.println(" Medium Rain Detected");
+      }
+      else{
+        digitalWrite(12,HIGH);
+        digitalWrite(10,LOW);
+        Serial.println(" Heavy Rain Detected");
+        }  
+    }
+```
+- **Circuit :**
+    ![Exp18](https://user-images.githubusercontent.com/74300223/216530963-8b75d144-db54-469e-a1ae-30d6794bd371.jpg)
+
+    
