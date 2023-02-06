@@ -644,6 +644,7 @@
     
 ### 19. Interfacing of Arduino with Metal Sensor KY036
 - **Code :**
+```
     void setup() {
       pinMode(2,INPUT);
       pinMode(10,OUTPUT);
@@ -658,6 +659,7 @@
         digitalWrite(10,0);
       }
     }
+```
 - **Circuit :**
     ![SGCAM_20230206_104923770](https://user-images.githubusercontent.com/74300223/216890030-639b99f0-b3d6-4080-b89a-2a46a045254f.jpg)
     ![SGCAM_20230206_104937575](https://user-images.githubusercontent.com/74300223/216890057-403ddbf3-f2db-4d0b-a0af-32734d04c6d9.jpg)
