@@ -715,3 +715,41 @@
 ```
 - **Circuit :**
     ![Shiny Leelo-Krunk](https://user-images.githubusercontent.com/74300223/217440200-5b891158-eae5-41e9-b6f3-a25e6c0c6245.png)
+
+### 22. Interfacing of Arduino with LDR with 3 LEDs
+- **Code :**
+``` 
+    void setup()
+    {
+      pinMode(13, OUTPUT);
+      pinMode(10, OUTPUT);
+      pinMode(8, OUTPUT);
+      pinMode(A0, INPUT);
+      Serial.begin(9600);
+    }
+
+    void loop()
+    {
+
+      int val = analogRead(A0);
+      Serial.println(val);
+      if(val<300){
+        digitalWrite(13, HIGH);
+        digitalWrite(10, LOW);
+        digitalWrite(8, LOW);
+      }
+      else if (val>=300 && val<=600){
+        digitalWrite(10, HIGH);
+        digitalWrite(13, LOW);
+        digitalWrite(8, LOW);
+      }
+      else{
+        digitalWrite(8, HIGH);
+        digitalWrite(10, LOW);
+        digitalWrite(13, LOW);
+      }
+    }
+```
+- **Circuit :**
+    ![Shiny Leelo-Krunk (1)](https://user-images.githubusercontent.com/74300223/217444346-a44e242f-d504-4b9f-bd67-d102637cdcb6.png)
+
