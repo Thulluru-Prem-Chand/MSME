@@ -692,3 +692,26 @@
 ```
 - **Circuit :**
     ![SGCAM_20230206_111629199](https://user-images.githubusercontent.com/74300223/216894293-e68904d1-36be-4596-95e7-ebf1dd55b693.jpg)
+
+### 21. Interfacing of Arduino with LDR
+- **Code :**
+```
+    void setup()
+    {
+      pinMode(13, OUTPUT);
+      pinMode(A0, INPUT);
+    }
+
+    void loop()
+    {
+      int val = analogRead(A0);
+      if(val<300){
+        digitalWrite(13, HIGH);
+      }
+      else{
+        digitalWrite(13, LOW);
+      }
+    }
+```
+- **Circuit :**
+    ![Shiny Leelo-Krunk](https://user-images.githubusercontent.com/74300223/217440200-5b891158-eae5-41e9-b6f3-a25e6c0c6245.png)
